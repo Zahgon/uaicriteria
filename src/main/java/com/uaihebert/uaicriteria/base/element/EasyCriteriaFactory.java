@@ -21,7 +21,6 @@ import com.uaihebert.model.EasyCriteria;
 import com.uaihebert.model.EasyCriteriaImp;
 import com.uaihebert.uaicriteria.UaiCriteria;
 import com.uaihebert.uaicriteria.UaiCriteriaFactory;
-
 import javax.persistence.EntityManager;
 
 /**
@@ -43,9 +42,7 @@ public final class EasyCriteriaFactory {
      * @return a EasyCriteria instance.
      */
     public static <T> EasyCriteria<T> createQueryCriteria(final EntityManager entityManager, final Class<T> entityClass) {
-        final UaiCriteria<T> uaiCriteria = UaiCriteriaFactory.createQueryCriteria(entityManager, entityClass);
-
-        return new EasyCriteriaImp<T>(uaiCriteria);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -59,22 +56,10 @@ public final class EasyCriteriaFactory {
      * @return a EasyCriteria instance.
      */
     public static <T> EasyCriteria<T> createQueryCriteria(final EntityManager entityManager, final Class<T> entityClass, final EasyCriteria easyCTO) {
-        if (!(easyCTO instanceof EasyCTOImp)) {
-            throw new IllegalArgumentException("Should I be receiving an object like this? " + easyCTO);
-        }
-
-        final EasyCTOImp<T> easyCTOImp = (EasyCTOImp) easyCTO;
-
-        final UaiCTOImp<T> uaiCriteriaImp = new UaiCTOImp(easyCTOImp.isDistinct(), easyCTOImp.getOrderByList(), easyCTOImp.getCriteriaConditionTypeList(), easyCTOImp.getJoinList());
-        uaiCriteriaImp.setFirstResult(easyCTOImp.getFirstResult());
-        uaiCriteriaImp.setMaxResults(easyCTOImp.getMaxResults());
-
-        final UaiCriteria<T> uaiCriteria = UaiCriteriaFactory.createQueryCriteria(entityManager, entityClass, uaiCriteriaImp);
-
-        return new EasyCriteriaImp<T>(uaiCriteria);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static <T> EasyCriteria<T> createEasyCTO() {
-        return new EasyCTOImp<T>();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

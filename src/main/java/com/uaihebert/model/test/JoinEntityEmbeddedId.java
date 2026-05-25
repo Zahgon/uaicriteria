@@ -33,30 +33,26 @@ public class JoinEntityEmbeddedId {
     private List<EntityEmbeddedId> entityEmbeddedIdList;
 
     public List<EntityEmbeddedId> getEntityEmbeddedIdList() {
-        if (entityEmbeddedIdList == null) {
-            entityEmbeddedIdList = new ArrayList<EntityEmbeddedId>();
-        }
-
-        return entityEmbeddedIdList;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setEntityEmbeddedIdList(final List<EntityEmbeddedId> entityEmbeddedId) {
-        this.entityEmbeddedIdList = entityEmbeddedId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public int getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setId(final int id) {
-        this.id = id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getJustString() {
-        return justString;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setJustString(final String justString) {
-        this.justString = justString;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -16,34 +16,25 @@
 package com.uaihebert.uaicriteria.path;
 
 public final class StringPathBreaker {
+
     private static final int LAST_DOT_POSITION = 1;
 
     private StringPathBreaker() {
     }
 
     public static boolean hasPath(final String path) {
-        return path.split("\\.").length > 1;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static String[] splitPath(final String path) {
-        return path.split("\\.");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static String createPathAsString(final String[] stringArray, final int endAtIndex) {
-        String result = "";
-
-        for (int i = 0; i < endAtIndex; i++) {
-            result += stringArray[i] + ".";
-        }
-
-        return result.substring(0, result.length() - LAST_DOT_POSITION);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static String[] removeLastPath(final String[] pathArray) {
-        final String[] result = new String[pathArray.length - 1];
-
-        System.arraycopy(pathArray, 0, result, 0, pathArray.length - 1);
-
-        return result;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

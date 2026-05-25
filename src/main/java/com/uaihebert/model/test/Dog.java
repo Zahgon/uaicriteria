@@ -29,9 +29,13 @@ public class Dog {
     private int id;
 
     private String name;
+
     private double weight;
+
     private float hairSize;
+
     private long fleasTotal;
+
     private int toysTotal;
 
     @Temporal(TemporalType.TIMESTAMP)
@@ -44,7 +48,6 @@ public class Dog {
     private Person person;
 
     public Dog() {
-
     }
 
     public Dog(final int id, final String name, final double weight, final Date dateOfBirth, final float hairSize, final long fleasTotal, final int toysTotal) {
@@ -58,94 +61,88 @@ public class Dog {
     }
 
     public static void main(final String[] args) {
-
-        System.out.println(new Date());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public int getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setId(final int id) {
-        this.id = id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setName(final String name) {
-        this.name = name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public double getWeight() {
-        return weight;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setWeight(final double weight) {
-        this.weight = weight;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Date getDateOfBirth() {
-        return dateOfBirth;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setDateOfBirth(final Date dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Person getPerson() {
-        return person;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setPerson(final Person person) {
-        this.person = person;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Date getDateOfFirstPuppyBirth() {
-        return dateOfFirstPuppyBirth;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setDateOfFirstPuppyBirth(final Date dateOfFirstPuppyBirth) {
-        this.dateOfFirstPuppyBirth = dateOfFirstPuppyBirth;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public float getHairSize() {
-        return hairSize;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setHairSize(final float hairSize) {
-        this.hairSize = hairSize;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public long getFleasTotal() {
-        return fleasTotal;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setFleasTotal(final long fleasTotal) {
-        this.fleasTotal = fleasTotal;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public int getToysTotal() {
-        return toysTotal;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setToysTotal(final int toysTotal) {
-        this.toysTotal = toysTotal;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public int hashCode() {
-        return getId();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public boolean equals(final Object obj) {
-        if (obj instanceof Dog) {
-            final Dog dog = (Dog) obj;
-            return dog.getId() == getId();
-        }
-
-        return false;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

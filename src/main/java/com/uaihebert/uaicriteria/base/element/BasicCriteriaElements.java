@@ -23,69 +23,37 @@ import java.util.List;
 import java.util.Map;
 
 public class BasicCriteriaElements<T> {
+
     private Integer maxResults;
+
     private Integer firstResult;
 
     EntityManager entityManager;
 
     private BaseCriteria countCriteria;
+
     private BaseCriteria multiselectCriteria;
+
     private BaseCriteria regularCriteria;
+
     private BaseCriteria subQueryCriteria;
 
     private final List<BaseCriteria> baseCriteriaList = new ArrayList<BaseCriteria>();
 
     public TypedQuery<T> getRegularQuery() {
-        if (regularCriteria == null) {
-            throw new IllegalStateException("You cannot get a regular query when you create a multiselect query");
-        }
-
-        regularCriteria.setUpCriteria();
-
-        final TypedQuery typedQuery = entityManager.createQuery(regularCriteria.getConvertedCriteriaQuery());
-
-        setPagination(typedQuery);
-        setUpHintMap(typedQuery, regularCriteria);
-
-        return typedQuery;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public BaseCriteria<T> getBaseCriteriaForSubQuery() {
-        return regularCriteria;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public TypedQuery<Long> getCountQuery() {
-        if (multiselectCriteria != null) {
-            throw new IllegalStateException("You cannot get a count from multiselect query. \n If you want to count, you should use the method that will count an attribute");
-        }
-
-        countCriteria.setCountSelect();
-
-        countCriteria.setUpCriteria();
-
-        final TypedQuery<Long> typedQuery = entityManager.createQuery(countCriteria.getConvertedCriteriaQuery());
-
-        setPagination(typedQuery);
-        setUpHintMap(typedQuery, countCriteria);
-
-        return typedQuery;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public TypedQuery<Object> getMultiSelectQuery() {
-        if (multiselectCriteria == null) {
-            throw new IllegalStateException("You cannot get a multiselect query when you create a regular query");
-        }
-
-        multiselectCriteria.setMultiSelectSelect();
-
-        multiselectCriteria.setUpCriteria();
-
-        final TypedQuery<Object> typedQuery = entityManager.createQuery(multiselectCriteria.getConvertedCriteriaQuery());
-
-        setPagination(typedQuery);
-        setUpHintMap(typedQuery, multiselectCriteria);
-
-        return typedQuery;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private void setUpHintMap(final TypedQuery typedQuery, final BaseCriteria baseCriteria) {
@@ -95,58 +63,52 @@ public class BasicCriteriaElements<T> {
         }
     }
 
-
     private void setPagination(final TypedQuery typedQuery) {
         if (firstResult != null) {
             typedQuery.setFirstResult(firstResult);
         }
-
         if (maxResults != null) {
             typedQuery.setMaxResults(maxResults);
         }
     }
 
     public List<BaseCriteria> getBaseCriteriaList() {
-        return baseCriteriaList;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setFirstResult(final Integer firstResult) {
-        this.firstResult = firstResult;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setMaxResults(final Integer maxResults) {
-        this.maxResults = maxResults;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isBatooProvider() {
-        return entityManager.toString().contains("batoo");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Subquery getSubquery() {
-        return subQueryCriteria.getSubquery();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public BaseCriteria getBaseSubCriteria() {
-        return subQueryCriteria;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setCountCriteria(final BaseCriteria countCriteria) {
-        this.countCriteria = countCriteria;
-        baseCriteriaList.add(this.countCriteria);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setMultiSelectCriteria(final BaseCriteria multiselectCriteria) {
-        this.multiselectCriteria = multiselectCriteria;
-        baseCriteriaList.add(this.multiselectCriteria);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setRegularCriteria(final BaseCriteria regularCriteria) {
-        this.regularCriteria = regularCriteria;
-        baseCriteriaList.add(this.regularCriteria);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setSubQueryCriteria(final BaseCriteria subQueryCriteria) {
-        this.subQueryCriteria = subQueryCriteria;
-        baseCriteriaList.add(this.subQueryCriteria);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

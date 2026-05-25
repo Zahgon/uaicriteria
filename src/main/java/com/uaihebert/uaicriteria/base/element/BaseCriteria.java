@@ -16,7 +16,6 @@
 package com.uaihebert.uaicriteria.base.element;
 
 import com.uaihebert.uaicriteria.wrapper.JoinWrapper;
-
 import javax.persistence.criteria.AbstractQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
@@ -34,16 +33,21 @@ import java.util.List;
 import java.util.Map;
 
 public class BaseCriteria<T> {
+
     public static final int DEFAULT_OR_PREDICATE_INDEX = 0;
 
     private final Class<T> entityClass;
 
     private final Root<T> root;
+
     private final Subquery<T> subquery;
+
     private final CriteriaQuery<T> criteriaQuery;
+
     private final CriteriaBuilder criteriaBuilder;
 
     private final Map<String, String> createdHintMap = new HashMap<String, String>();
+
     private final Map<String, JoinWrapper> createdJoinWrapperMap = new HashMap<String, JoinWrapper>();
 
     private final List<Order> orderByList = new ArrayList<Order>();
@@ -51,9 +55,11 @@ public class BaseCriteria<T> {
     private final List<Predicate> createdPredicateList = new ArrayList<Predicate>();
 
     private final List<Expression> multiselectSelectList = new ArrayList<Expression>();
+
     private final List<Expression> groupByList = new ArrayList<Expression>();
 
     private final Map<Integer, List<Predicate>> orPredicateMap = new HashMap<Integer, List<Predicate>>();
+
     private final Map<Integer, List<Predicate>> andSeparatedByOrPredicateMap = new HashMap<Integer, List<Predicate>>();
 
     public BaseCriteria(final Root<T> root, final CriteriaQuery<T> criteriaQuery, final CriteriaBuilder criteriaBuilder, final Class<T> entityClass) {
@@ -73,83 +79,62 @@ public class BaseCriteria<T> {
     }
 
     public AbstractQuery<T> getCriteriaQuery() {
-        if (subquery != null) {
-            return subquery;
-        }
-
-        return criteriaQuery;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Map<String, String> getCreatedHintMap() {
-        final Map<String, String> result = new HashMap<String, String>(createdHintMap);
-
-        createdHintMap.clear();
-
-        return result;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CriteriaBuilder getCriteriaBuilder() {
-        return criteriaBuilder;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Subquery<T> getSubquery() {
-        return subquery;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Class<T> getEntityClass() {
-        return entityClass;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void addAndPredicate(final Predicate predicate) {
-        createdPredicateList.add(predicate);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setUpCriteria() {
-        addWhereConditions();
-        addOrderByConditions();
-        addGroupByValues();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private void addOrderByConditions() {
         if (orderByList.isEmpty()) {
             return;
         }
-
         final List<Order> ordinationList = new ArrayList<Order>(orderByList);
-
         final CriteriaQuery<T> convertedCriteriaQuery = getConvertedCriteriaQuery();
-
         convertedCriteriaQuery.orderBy(ordinationList);
-
         orderByList.clear();
     }
 
     public CriteriaQuery<T> getConvertedCriteriaQuery() {
-        final AbstractQuery<T> abstractQuery = getCriteriaQuery();
-
-        return (CriteriaQuery) abstractQuery;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private void addWhereConditions() {
         final List<Predicate> conditionList = extractAllConditions();
-
         if (conditionList.isEmpty()) {
             return;
         }
-
         final Predicate[] predicateArraySize = new Predicate[conditionList.size()];
         final Predicate[] predicateArray = conditionList.toArray(predicateArraySize);
-
         getCriteriaQuery().where(predicateArray);
     }
 
     private List<Predicate> extractAllConditions() {
         final List<Predicate> conditionList = new ArrayList<Predicate>();
-
         addWhereConditions(conditionList);
         addOrConditions(conditionList);
         addAndSeparatedByConditions(conditionList);
-
         return conditionList;
     }
 
@@ -157,31 +142,24 @@ public class BaseCriteria<T> {
         if (andSeparatedByOrPredicateMap.isEmpty()) {
             return;
         }
-
         final List<Predicate> orPredicateList = convertCriteriaToAndOrPredicateList();
-
         final Predicate or = createOrPredicateFromList(orPredicateList);
-
         orPredicateList.clear();
         orPredicateList.add(or);
-
         conditionList.addAll(orPredicateList);
     }
 
     private Predicate createOrPredicateFromList(final List<Predicate> orPredicateList) {
         final Predicate[] predicateArraySize = new Predicate[orPredicateList.size()];
         final Predicate[] predicateArray = orPredicateList.toArray(predicateArraySize);
-
         return criteriaBuilder.or(predicateArray);
     }
 
     private List<Predicate> convertCriteriaToAndOrPredicateList() {
         final List<Predicate> orPredicateList = new ArrayList<Predicate>();
-
         for (final List<Predicate> predicateList : andSeparatedByOrPredicateMap.values()) {
             final Predicate and = createAndCondition(predicateList);
             final Predicate orPredicate = criteriaBuilder.or(and);
-
             orPredicateList.add(orPredicate);
         }
         return orPredicateList;
@@ -190,7 +168,6 @@ public class BaseCriteria<T> {
     private Predicate createAndCondition(final List<Predicate> predicateList) {
         final Predicate[] predicateArraySize = new Predicate[predicateList.size()];
         final Predicate[] predicateArray = predicateList.toArray(predicateArraySize);
-
         return criteriaBuilder.and(predicateArray);
     }
 
@@ -198,14 +175,11 @@ public class BaseCriteria<T> {
         if (orPredicateMap.isEmpty()) {
             return;
         }
-
         final List<Predicate> orPredicateList = new ArrayList<Predicate>();
-
         for (final List<Predicate> predicateList : orPredicateMap.values()) {
             final Predicate orPredicate = createOrPredicateFromList(predicateList);
             orPredicateList.add(orPredicate);
         }
-
         conditionList.addAll(orPredicateList);
     }
 
@@ -214,82 +188,61 @@ public class BaseCriteria<T> {
     }
 
     public JoinWrapper addJoin(final String joinName, final JoinType joinType, final boolean isFetch) {
-        final JoinWrapper join = new JoinWrapper(root);
-
-        join.createJoinInRoot(joinName, joinType, isFetch);
-
-        createdJoinWrapperMap.put(joinName, join);
-
-        return join;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public JoinWrapper addJoinFromJoin(final String joinName, final JoinWrapper joinWrapper) {
-        createdJoinWrapperMap.put(joinName, joinWrapper);
-
-        return joinWrapper;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public JoinWrapper getJoin(final String joinName) {
-        final JoinWrapper join = createdJoinWrapperMap.get(joinName);
-
-        if (join == null) {
-            throw new IllegalArgumentException("The requested Join: " + joinName + " was not found. " +
-                    "\n Did you create the join by invoking any of the join methods?");
-        }
-
-        return join;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Path getPath(final String requiredPath) {
-        return root.get(requiredPath);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void addHint(final String key, final String value) {
-        createdHintMap.put(key, value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void addOrPredicate(final int index, final Predicate predicate) {
-        final List<Predicate> predicateList = getOrPredicateList(index);
-        predicateList.add(predicate);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private List<Predicate> getOrPredicateList(final int index) {
         List<Predicate> predicateList = orPredicateMap.get(index);
-
         if (predicateList == null) {
             predicateList = new ArrayList<Predicate>();
             orPredicateMap.put(index, predicateList);
         }
-
         return predicateList;
     }
 
     private List<Predicate> getAndSeparatedByOrPredicateList(final int index) {
         List<Predicate> predicateList = andSeparatedByOrPredicateMap.get(index);
-
         if (predicateList == null) {
             predicateList = new ArrayList<Predicate>();
             andSeparatedByOrPredicateMap.put(index, predicateList);
         }
-
         return predicateList;
     }
 
     public void addAndSeparatedByOr(final int index, final Predicate predicate) {
-        final List<Predicate> predicateList = getAndSeparatedByOrPredicateList(index);
-        predicateList.add(predicate);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean hasJoin(final String currentJoin) {
-        return createdJoinWrapperMap.containsKey(currentJoin);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void addOrdination(final Order currentOrdination) {
-        orderByList.add(currentOrdination);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setDistinctTrue() {
-        getCriteriaQuery().distinct(true);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private CriteriaQuery<Long> getCountCriteriaQuery() {
@@ -297,26 +250,19 @@ public class BaseCriteria<T> {
     }
 
     public void setCountSelect() {
-        if (getCriteriaQuery().isDistinct()) {
-            useCountDistinctInsteadOfQueryDistinct();
-            return;
-        }
-
-        getCountCriteriaQuery().select(criteriaBuilder.count(root));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setMultiSelectSelect() {
-        addMultiSelectMultiSelectValues();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private void addGroupByValues() {
         if (groupByList.isEmpty()) {
             return;
         }
-
         final Expression[] multiselectGroupByArray = new Expression[groupByList.size()];
         groupByList.toArray(multiselectGroupByArray);
-
         getCriteriaQuery().groupBy(multiselectGroupByArray);
     }
 
@@ -324,10 +270,8 @@ public class BaseCriteria<T> {
         if (multiselectSelectList.isEmpty()) {
             throw new IllegalStateException("You want to extract a multiselect query, but you have not added any attribute or method to the query");
         }
-
         final Selection[] multiselectSelectArray = new Selection[multiselectSelectList.size()];
         multiselectSelectList.toArray(multiselectSelectArray);
-
         getConvertedCriteriaQuery().multiselect(multiselectSelectArray);
     }
 
@@ -337,14 +281,14 @@ public class BaseCriteria<T> {
     }
 
     public void addMultiSelectOperationExpression(final Expression multiselectPredicate) {
-        multiselectSelectList.add(multiselectPredicate);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void addMultiSelectPathException(final Expression multiselectPredicate) {
-        multiselectSelectList.add(multiselectPredicate);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void groupBy(final Path attributeToGroup) {
-        groupByList.add(attributeToGroup);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

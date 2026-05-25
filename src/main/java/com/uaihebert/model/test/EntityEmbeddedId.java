@@ -24,7 +24,9 @@ public class EntityEmbeddedId {
 
     @EmbeddedId
     private EmbeddedIdDummy id;
+
     private String justString;
+
     @ManyToOne
     private JoinEntityEmbeddedId joinEntityEmbeddedId;
 
@@ -37,26 +39,26 @@ public class EntityEmbeddedId {
     }
 
     public EmbeddedIdDummy getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setId(final EmbeddedIdDummy id) {
-        this.id = id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getJustString() {
-        return justString;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setJustString(final String justString) {
-        this.justString = justString;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public JoinEntityEmbeddedId getJoinEntityEmbeddedId() {
-        return joinEntityEmbeddedId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setJoinEntityEmbeddedId(final JoinEntityEmbeddedId joinEntityEmbeddedId) {
-        this.joinEntityEmbeddedId = joinEntityEmbeddedId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

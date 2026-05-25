@@ -35,15 +35,19 @@ public class RegularEntityOne {
     private String stringAttribute;
 
     private Long longAttributeOne;
+
     private Long longAttributeTwo;
 
     private Float floatAttributeOne;
+
     private Float floatAttributeTwo;
 
     private Integer integerAttributeOne;
+
     private Integer integerAttributeTwo;
 
     private Boolean booleanAttributeOne;
+
     private Boolean booleanAttributeTwo;
 
     @Temporal(TemporalType.DATE)
@@ -59,9 +63,11 @@ public class RegularEntityOne {
     private Date dateAttributeTwo;
 
     private BigDecimal bigDecimalAttributeOne;
+
     private BigDecimal bigDecimalAttributeTwo;
 
     private Double doubleAttributeOne;
+
     private Double doubleAttributeTwo;
 
     @Enumerated(EnumType.STRING)
@@ -77,195 +83,188 @@ public class RegularEntityOne {
     private RegularEntityFour regularEntityFour;
 
     public long getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setId(final long id) {
-        this.id = id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getStringAttribute() {
-        return stringAttribute;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setStringAttribute(final String stringAttribute) {
-        this.stringAttribute = stringAttribute;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Long getLongAttributeOne() {
-        return longAttributeOne;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setLongAttributeOne(final Long longAttributeOne) {
-        this.longAttributeOne = longAttributeOne;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Long getLongAttributeTwo() {
-        return longAttributeTwo;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setLongAttributeTwo(final Long longAttributeTwo) {
-        this.longAttributeTwo = longAttributeTwo;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Float getFloatAttributeOne() {
-        return floatAttributeOne;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setFloatAttributeOne(final Float floatAttributeOne) {
-        this.floatAttributeOne = floatAttributeOne;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Float getFloatAttributeTwo() {
-        return floatAttributeTwo;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setFloatAttributeTwo(final Float floatAttributeTwo) {
-        this.floatAttributeTwo = floatAttributeTwo;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Integer getIntegerAttributeOne() {
-        return integerAttributeOne;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setIntegerAttributeOne(final Integer integerAttributeOne) {
-        this.integerAttributeOne = integerAttributeOne;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Integer getIntegerAttributeTwo() {
-        return integerAttributeTwo;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setIntegerAttributeTwo(final Integer integerAttributeTwo) {
-        this.integerAttributeTwo = integerAttributeTwo;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Boolean getBooleanAttributeOne() {
-        return booleanAttributeOne;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setBooleanAttributeOne(final Boolean booleanAttributeOne) {
-        this.booleanAttributeOne = booleanAttributeOne;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Boolean getBooleanAttributeTwo() {
-        return booleanAttributeTwo;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setBooleanAttributeTwo(final Boolean booleanAttributeTwo) {
-        this.booleanAttributeTwo = booleanAttributeTwo;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Calendar getCalendarAttributeOne() {
-        return calendarAttributeOne;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setCalendarAttributeOne(final Calendar calendarAttributeOne) {
-        this.calendarAttributeOne = calendarAttributeOne;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Calendar getCalendarAttributeTwo() {
-        return calendarAttributeTwo;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setCalendarAttributeTwo(final Calendar calendarAttributeTwo) {
-        this.calendarAttributeTwo = calendarAttributeTwo;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Date getDateAttributeOne() {
-        return dateAttributeOne;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setDateAttributeOne(final Date dateAttributeOne) {
-        this.dateAttributeOne = dateAttributeOne;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Date getDateAttributeTwo() {
-        return dateAttributeTwo;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setDateAttributeTwo(final Date dateAttributeTwo) {
-        this.dateAttributeTwo = dateAttributeTwo;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public BigDecimal getBigDecimalAttributeOne() {
-        return bigDecimalAttributeOne;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setBigDecimalAttributeOne(final BigDecimal bigDecimalAttributeOne) {
-        this.bigDecimalAttributeOne = bigDecimalAttributeOne;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public BigDecimal getBigDecimalAttributeTwo() {
-        return bigDecimalAttributeTwo;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setBigDecimalAttributeTwo(final BigDecimal bigDecimalAttributeTwo) {
-        this.bigDecimalAttributeTwo = bigDecimalAttributeTwo;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Double getDoubleAttributeOne() {
-        return doubleAttributeOne;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setDoubleAttributeOne(final Double doubleAttributeOne) {
-        this.doubleAttributeOne = doubleAttributeOne;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Double getDoubleAttributeTwo() {
-        return doubleAttributeTwo;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setDoubleAttributeTwo(final Double doubleAttributeTwo) {
-        this.doubleAttributeTwo = doubleAttributeTwo;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public RegularEntityTwo getRegularEntityTwo() {
-        return regularEntityTwo;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setRegularEntityTwo(final RegularEntityTwo regularEntityTwo) {
-        this.regularEntityTwo = regularEntityTwo;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public RegularEntityThree getRegularEntityThree() {
-        return regularEntityThree;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setRegularEntityThree(final RegularEntityThree regularEntityThree) {
-        this.regularEntityThree = regularEntityThree;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public RegularEntityFour getRegularEntityFour() {
-        return regularEntityFour;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setRegularEntityFour(final RegularEntityFour regularEntityFour) {
-        this.regularEntityFour = regularEntityFour;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public RegularEnum getRegularEnum() {
-        return regularEnum;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setRegularEnum(final RegularEnum regularEnum) {
-        this.regularEnum = regularEnum;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public boolean equals(final Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        final RegularEntityOne that = (RegularEntityOne) o;
-
-        if (id != that.id) return false;
-
-        return true;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public int hashCode() {
-        return (int) (id ^ (id >>> 32));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -31,7 +31,6 @@ public class Cat {
     private Person person;
 
     public Cat() {
-
     }
 
     public Cat(final int id, final String name) {
@@ -40,26 +39,26 @@ public class Cat {
     }
 
     public int getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setId(final int id) {
-        this.id = id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setName(final String name) {
-        this.name = name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Person getPerson() {
-        return person;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setPerson(final Person person) {
-        this.person = person;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

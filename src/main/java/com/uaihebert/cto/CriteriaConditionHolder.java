@@ -21,22 +21,19 @@ import java.util.Collections;
 import java.util.List;
 
 public class CriteriaConditionHolder {
+
     private static final int DEFAULT_ATTRIBUTE_INDEX = 0;
 
-    private static final List<CriteriaConditionType> TYPES_THAT_ALLOWS_NULL_VALUE = Arrays.asList(
-            CriteriaConditionType.COLLECTION_IS_NOT_EMPTY,
-            CriteriaConditionType.COLLECTION_IS_EMPTY,
-            CriteriaConditionType.AND_IS_NOT_NULL,
-            CriteriaConditionType.AND_IS_NULL,
-            CriteriaConditionType.OR_IS_NULL,
-            CriteriaConditionType.OR_IS_NOT_NULL
-    );
+    private static final List<CriteriaConditionType> TYPES_THAT_ALLOWS_NULL_VALUE = Arrays.asList(CriteriaConditionType.COLLECTION_IS_NOT_EMPTY, CriteriaConditionType.COLLECTION_IS_EMPTY, CriteriaConditionType.AND_IS_NOT_NULL, CriteriaConditionType.AND_IS_NULL, CriteriaConditionType.OR_IS_NULL, CriteriaConditionType.OR_IS_NOT_NULL);
 
     private final Object[] valueArray;
 
     public final int attributeIndex;
+
     public final boolean toLowerCase;
+
     public final String attributeName;
+
     public final CriteriaConditionType criteriaConditionType;
 
     public CriteriaConditionHolder(final CriteriaConditionType criteriaConditionType, final Object... valueArray) {
@@ -52,11 +49,9 @@ public class CriteriaConditionHolder {
     }
 
     public CriteriaConditionHolder(final int attributeIndex, final boolean toLowerCase, final String attributeName, final CriteriaConditionType criteriaConditionType, final Object... valueArray) {
-
         if (hasNullValue(valueArray) && nullNotAllowedForTheType(criteriaConditionType)) {
             throw new IllegalArgumentException("The value cannot be null");
         }
-
         this.attributeIndex = attributeIndex;
         this.toLowerCase = toLowerCase;
         this.valueArray = valueArray;
@@ -72,48 +67,40 @@ public class CriteriaConditionHolder {
         if (valueArray.length == 0) {
             return true;
         }
-
         for (final Object aValue : valueArray) {
             if (aValue == null) {
                 return true;
             }
         }
-
         return false;
     }
 
     public Object getValue() {
-        return valueArray[0];
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Object getValue(final int valueIndex) {
-        return valueArray[valueIndex];
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Object[] getValueArray() {
-        return valueArray;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getValueAsString() {
-        return getValue().toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String[] getValueAsStringArray() {
-        return convertToStringArray();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public List<String> getValueAsStringList() {
-        final String[] stringArray = convertToStringArray();
-        final List<String> result = new ArrayList<String>();
-
-        Collections.addAll(result, stringArray);
-
-        return result;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private String[] convertToStringArray() {
         final String[] stringArray = new String[valueArray.length];
-
         for (int i = 0; i < valueArray.length; i++) {
             stringArray[i] = valueArray[i].toString();
         }
@@ -121,10 +108,6 @@ public class CriteriaConditionHolder {
     }
 
     public List getValueAsList() {
-        final List list = new ArrayList();
-
-        Collections.addAll(list, valueArray);
-
-        return list;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -27,7 +27,7 @@ public final class EntityPathHelper {
      * @return an array of paths
      */
     public static String[] extractPaths(final String path) {
-        return path.split("\\.");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -39,17 +39,6 @@ public final class EntityPathHelper {
      * @return Path as String
      */
     public static String constructPathFromArray(final int firstIndex, final int finalIndex, final String[] paths) {
-
-        final StringBuilder result = new StringBuilder();
-
-        for (int i = firstIndex; i < finalIndex; i++) {
-            if (!(result.length() == 0)) {
-                result.append(".");
-            }
-
-            result.append(paths[i]);
-        }
-
-        return result.toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

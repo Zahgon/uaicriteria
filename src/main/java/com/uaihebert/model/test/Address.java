@@ -32,15 +32,17 @@ public class Address {
     private int id;
 
     private String streetName;
+
     private long houseNumber;
+
     private boolean isOld;
+
     private boolean isYellow;
 
     @Temporal(TemporalType.DATE)
     private Date buildingDate;
 
     public Address() {
-
     }
 
     public Address(final int id, final String streetName, final int houseNumber, final boolean isOld, final boolean isYellow, final Date buildingDate) {
@@ -53,65 +55,60 @@ public class Address {
     }
 
     public int getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setId(final int id) {
-        this.id = id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getStreetName() {
-        return streetName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setStreetName(final String streetName) {
-        this.streetName = streetName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public long getHouseNumber() {
-        return houseNumber;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setHouseNumber(final long houseNumber) {
-        this.houseNumber = houseNumber;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isOld() {
-        return isOld;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setOld(final boolean isOld) {
-        this.isOld = isOld;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isYellow() {
-        return isYellow;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setYellow(final boolean isYellow) {
-        this.isYellow = isYellow;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Date getBuildingDate() {
-        return buildingDate;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setBuildingDate(final Date buildingDate) {
-        this.buildingDate = buildingDate;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public int hashCode() {
-        return getId() * 34;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public boolean equals(final Object obj) {
-        if (obj instanceof Address) {
-            final Address address = (Address) obj;
-            return address.getId() == getId();
-        }
-
-        return false;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

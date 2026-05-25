@@ -34,12 +34,19 @@ public class NickName {
 
     @Id
     private int id;
+
     private String name;
+
     private String justString;
+
     private long justLong;
+
     private float justFloat;
+
     private double justDouble;
+
     private boolean justBoolean;
+
     private BigDecimal justBigDecimal;
 
     @Temporal(TemporalType.DATE)
@@ -77,22 +84,22 @@ public class NickName {
     }
 
     public int getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setId(final int id) {
-        this.id = id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setJustSet(final Set<DummyEntity> justSet) {
-        this.justSet = justSet;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setJustList(final List<DummyEntity> justList) {
-        this.justList = justList;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setJustCollection(final Collection<DummyEntity> justCollection) {
-        this.justCollection = justCollection;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

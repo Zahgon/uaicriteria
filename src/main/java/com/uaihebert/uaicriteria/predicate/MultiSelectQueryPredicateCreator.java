@@ -22,74 +22,74 @@ import javax.persistence.criteria.Path;
 public final class MultiSelectQueryPredicateCreator extends AbstractPredicateCreator {
 
     public static Expression sum(final CriteriaBuilder criteriaBuilder, final Path<Number> path) {
-        return criteriaBuilder.sum(path);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Expression avg(final CriteriaBuilder criteriaBuilder, final Path<Number> path) {
-        return criteriaBuilder.avg(path);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Expression square(final CriteriaBuilder criteriaBuilder, final Path<Number> path) {
-        return criteriaBuilder.sqrt(path);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static <N extends Number> Expression sum(final CriteriaBuilder criteriaBuilder, final Path path, final N number) {
-        return criteriaBuilder.sum(path, number);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static <N extends Number> Expression sum(final CriteriaBuilder criteriaBuilder, final N number, final Path path) {
-        return criteriaBuilder.sum(number, path);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Expression diff(final CriteriaBuilder criteriaBuilder, final Path<Number> firstPath, final Path<Number> secondAttribute) {
-        return criteriaBuilder.diff(firstPath, secondAttribute);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static <N extends Number> Expression diff(final CriteriaBuilder criteriaBuilder, final Path<Number> path, final N number) {
-        return criteriaBuilder.diff(path, number);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static <N extends Number> Expression diff(final CriteriaBuilder criteriaBuilder, final N number, final Path path) {
-        return criteriaBuilder.diff(number, path);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Expression multiply(final CriteriaBuilder criteriaBuilder, final Path<Number> firstPath, final Path<Number> secondAttribute) {
-        return criteriaBuilder.prod(firstPath, secondAttribute);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static <N extends Number> Expression multiply(final CriteriaBuilder criteriaBuilder, final Path<Number> path, final N number) {
-        return criteriaBuilder.prod(path, number);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static <N extends Number> Expression multiply(final CriteriaBuilder criteriaBuilder, final N number, final Path path) {
-        return criteriaBuilder.prod(number, path);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Expression divide(final CriteriaBuilder criteriaBuilder, final Path<Number> firstPath, final Path<Number> secondAttribute) {
-        return criteriaBuilder.quot(firstPath, secondAttribute);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static <N extends Number> Expression divide(final CriteriaBuilder criteriaBuilder, final Path<Number> path, final N number) {
-        return criteriaBuilder.quot(path, number);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static <N extends Number> Expression divide(final CriteriaBuilder criteriaBuilder, final N number, final Path path) {
-        return criteriaBuilder.quot(number, path);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Expression module(final CriteriaBuilder criteriaBuilder, final Path<Integer> firstPath, final Path<Integer> secondAttribute) {
-        return criteriaBuilder.mod(firstPath, secondAttribute);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Expression module(final CriteriaBuilder criteriaBuilder, final Path<Integer> path, final Integer number) {
-        return criteriaBuilder.mod(path, number);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Expression module(final CriteriaBuilder criteriaBuilder, final Integer number, final Path<Integer> path) {
-        return criteriaBuilder.mod(number, path);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Expression count(final CriteriaBuilder criteriaBuilder, final Path path) {
-        return criteriaBuilder.count(path);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

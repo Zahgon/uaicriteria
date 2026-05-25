@@ -17,7 +17,6 @@ package com.uaihebert.uaicriteria.path;
 
 import com.uaihebert.uaicriteria.base.element.BaseCriteria;
 import com.uaihebert.util.ReflectionUtil;
-
 import javax.persistence.criteria.Predicate;
 import java.math.BigDecimal;
 import java.util.Calendar;
@@ -29,51 +28,30 @@ public class AbstractPathCreator {
     }
 
     static Predicate createAndPredicate(final BaseCriteria baseCriteria, final Predicate... equal) {
-        return baseCriteria.getCriteriaBuilder().and(equal);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     static void finishWithAndPredicate(final BaseCriteria baseCriteria, final Predicate... currentPredicate) {
-        final Predicate andPredicate = createAndPredicate(baseCriteria, currentPredicate);
-        baseCriteria.addAndPredicate(andPredicate);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     static Comparable getTypedValue(final Class entityClass, final String attributeName, final Object value) {
-        if (ReflectionUtil.isNumber(entityClass, attributeName)) {
-            return numberType(entityClass, attributeName, value);
-        }
-
-        if (ReflectionUtil.isCalendar(entityClass, attributeName)) {
-            return (Calendar) value;
-        }
-
-        if (ReflectionUtil.isDate(entityClass, attributeName)) {
-            return (Date) value;
-        }
-
-        if (ReflectionUtil.isString(entityClass, attributeName)) {
-            return (String) value;
-        }
-
-        throw new IllegalArgumentException("The attribute: " + attributeName + " was not found in the entity: " + entityClass.getSimpleName());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private static Comparable numberType(final Class entityClass, final String attributeName, final Object value) {
         if (ReflectionUtil.isBigDecimal(entityClass, attributeName)) {
             return (BigDecimal) value;
         }
-
         if (ReflectionUtil.isDouble(entityClass, attributeName)) {
             return (Double) value;
         }
-
         if (ReflectionUtil.isLong(entityClass, attributeName)) {
             return (Long) value;
         }
-
         if (ReflectionUtil.isFloat(entityClass, attributeName)) {
             return (Float) value;
         }
-
         return (Integer) value;
     }
 }

@@ -19,16 +19,15 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.Expression;
 
 public class AbstractPredicateCreator {
+
     protected AbstractPredicateCreator() {
     }
 
     static Expression<String> createLoweredExpression(final CriteriaBuilder criteriaBuilder, final Expression path) {
-        final Expression<String> expressionAsString = (Expression<String>) path;
-        return criteriaBuilder.lower(expressionAsString);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     static String createLoweredValue(final Object value) {
-        final String valueAsString = (String) value;
-        return valueAsString.toLowerCase();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

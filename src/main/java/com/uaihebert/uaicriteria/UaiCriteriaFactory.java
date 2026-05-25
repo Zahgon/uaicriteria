@@ -18,7 +18,6 @@ package com.uaihebert.uaicriteria;
 import com.uaihebert.cto.UaiCTOImp;
 import com.uaihebert.cto.UaiCriteriaBuilder;
 import com.uaihebert.uaicriteria.criteria.QueryType;
-
 import javax.persistence.EntityManager;
 
 public final class UaiCriteriaFactory {
@@ -27,19 +26,19 @@ public final class UaiCriteriaFactory {
     }
 
     public static <T> UaiCriteria<T> createQueryCriteria(final EntityManager entityManager, final Class<T> classToUse) {
-        return createQueryCriteria(entityManager, classToUse, null, QueryType.REGULAR);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static <T> UaiCriteria<T> createMultiSelectCriteria(final EntityManager entityManager, final Class<T> classToUse) {
-        return createQueryCriteria(entityManager, classToUse, null, QueryType.TUPLE);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static <T> UaiCriteria<T> createQueryCriteria(final EntityManager entityManager, final Class<T> classToUse, final UaiCriteria<T> uaiCTO) {
-        return createQueryCriteria(entityManager, classToUse, uaiCTO, QueryType.REGULAR);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static <T> UaiCriteria<T> createMultiSelectCriteria(final EntityManager entityManager, final Class<T> classToUse, final UaiCriteria<T> uaiCTO) {
-        return createQueryCriteria(entityManager, classToUse, uaiCTO, QueryType.TUPLE);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private static <T> UaiCriteria<T> createQueryCriteria(final EntityManager entityManager, final Class<T> classToUse, final UaiCriteria<T> uaiCTO, final QueryType queryType) {
@@ -47,14 +46,12 @@ public final class UaiCriteriaFactory {
             if (!(uaiCTO instanceof UaiCTOImp)) {
                 throw new IllegalArgumentException("Should I be receiving an object like this? " + uaiCTO);
             }
-
             return UaiCriteriaBuilder.createUaiCriteriaFromCTO(uaiCTO, entityManager, classToUse, queryType);
         }
-
         return new UaiCriteriaImp<T>(entityManager, classToUse, queryType);
     }
 
     public static <T> UaiCriteria<T> createQueryUaiCTO() {
-        return new UaiCTOImp<T>();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

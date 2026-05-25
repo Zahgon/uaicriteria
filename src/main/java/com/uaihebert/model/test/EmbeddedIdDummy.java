@@ -20,7 +20,9 @@ import java.io.Serializable;
 
 @Embeddable
 public class EmbeddedIdDummy implements Serializable {
+
     private int idInteger;
+
     private String idString;
 
     public EmbeddedIdDummy() {
@@ -32,38 +34,28 @@ public class EmbeddedIdDummy implements Serializable {
     }
 
     public int getIdInteger() {
-        return idInteger;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setIdInteger(final int idInteger) {
-        this.idInteger = idInteger;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getIdString() {
-        return idString;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setIdString(final String idString) {
-        this.idString = idString;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public boolean equals(final Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        final EmbeddedIdDummy that = (EmbeddedIdDummy) o;
-
-        if (idInteger != that.idInteger) return false;
-        if (!idString.equals(that.idString)) return false;
-
-        return true;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public int hashCode() {
-        int result = idInteger;
-        result = 31 * result + idString.hashCode();
-        return result;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -20,10 +20,10 @@ import com.uaihebert.uaicriteria.base.element.BasicCriteriaElements;
 import com.uaihebert.uaicriteria.path.MultiSelectQueryPathCreator;
 import com.uaihebert.uaicriteria.path.RegularQueryPathCreator;
 import com.uaihebert.uaicriteria.subquery.SubQueryImp;
-
 import java.util.List;
 
 public class CriteriaCreator {
+
     private static final boolean DO_NOT_USE_LOWER_CASE = false;
 
     private final BasicCriteriaElements basicCriteriaElements;
@@ -33,446 +33,238 @@ public class CriteriaCreator {
     }
 
     public void andEquals(final boolean toLowerCase, final String attributeName, final Object value) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            RegularQueryPathCreator.andEquals(toLowerCase, baseCriteria, attributeName, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void andNotEquals(final boolean toLowerCase, final String attributeName, final Object value) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            RegularQueryPathCreator.andNotEquals(toLowerCase, baseCriteria, attributeName, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void innerJoin(final String joinName) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            RegularQueryPathCreator.innerJoin(joinName, baseCriteria);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void innerJoinFetch(final String joinName) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            RegularQueryPathCreator.innerJoinFetch(joinName, baseCriteria);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void leftJoinFetch(final String joinName) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            RegularQueryPathCreator.leftJoinFetch(joinName, baseCriteria);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void leftJoin(final String joinName) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            RegularQueryPathCreator.leftJoin(joinName, baseCriteria);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void orderByDesc(final String attributeName) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            RegularQueryPathCreator.orderBy(attributeName, baseCriteria, CriteriaResultOrderBy.DESC);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void orderByAsc(final String attributeName) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            RegularQueryPathCreator.orderBy(attributeName, baseCriteria, CriteriaResultOrderBy.ASC);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setFirstResult(final int firstResult) {
-        basicCriteriaElements.setFirstResult(firstResult);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setMaxResults(final int maxResults) {
-        basicCriteriaElements.setMaxResults(maxResults);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void addHint(final String key, final String value) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            RegularQueryPathCreator.andHint(baseCriteria, key, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void orEquals(final boolean toLowerCase, final String attributeName, final Object... valueArray) {
-        orEquals(toLowerCase, BaseCriteria.DEFAULT_OR_PREDICATE_INDEX, attributeName, valueArray, CriteriaOrType.EQUALS);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void orLike(final boolean toLowerCase, final String attributeName, final Object... valueArray) {
-        orEquals(toLowerCase, BaseCriteria.DEFAULT_OR_PREDICATE_INDEX, attributeName, valueArray, CriteriaOrType.LIKE);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void orNotLike(final boolean toLowerCase, final String attributeName, final Object... valueArray) {
-        orEquals(toLowerCase, BaseCriteria.DEFAULT_OR_PREDICATE_INDEX, attributeName, valueArray, CriteriaOrType.NOT_LIKE);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void orEquals(final boolean toLowerCase, final int index, final String attributeName, final Object[] valueArray, final CriteriaOrType orType) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            RegularQueryPathCreator.addOr(toLowerCase, index, baseCriteria, attributeName, valueArray, orType);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void addAndSeparatedByOr(final boolean toLowerCase, final int index, final String attributeName, final Object value) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            RegularQueryPathCreator.addAndSeparatedByOr(toLowerCase, index, baseCriteria, attributeName, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void andIsMemberOf(final Object value, final String collectionName) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            RegularQueryPathCreator.andIsMemberOf(baseCriteria, collectionName, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void andIsNotMemberOf(final Object value, final String collectionName) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            RegularQueryPathCreator.andIsNotMemberOf(baseCriteria, collectionName, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void andBetween(final boolean toLowerCase, final String attributeName, final Object valueA, final Object valueB) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            RegularQueryPathCreator.andBetween(toLowerCase, baseCriteria, attributeName, valueA, valueB);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void andGreaterOrEqualTo(final boolean toLowerCase, final String attributeName, final Object value) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            RegularQueryPathCreator.andGreaterOrEqualTo(toLowerCase, baseCriteria, attributeName, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void andLessThan(final boolean toLowerCase, final String attributeName, final Object value) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            RegularQueryPathCreator.andLessThan(toLowerCase, baseCriteria, attributeName, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void andLessOrEqualTo(final boolean toLowerCase, final String attributeName, final Object value) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            RegularQueryPathCreator.andLessOrEqualTo(toLowerCase, baseCriteria, attributeName, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void andGreaterThan(final boolean toLowerCase, final String attributeName, final Object value) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            RegularQueryPathCreator.andGreaterThan(toLowerCase, baseCriteria, attributeName, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void orNotEquals(final boolean toLowerCase, final String attributeName, final Object[] valueArray) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            RegularQueryPathCreator.orNotEquals(toLowerCase, baseCriteria, attributeName, valueArray);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void andIsNull(final String attributeName) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            RegularQueryPathCreator.andIsNull(baseCriteria, attributeName);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void orIsNull(final String attributeName) {
-        orEquals(DO_NOT_USE_LOWER_CASE, BaseCriteria.DEFAULT_OR_PREDICATE_INDEX, attributeName, null, CriteriaOrType.IS_NULL);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void andIsNotNull(final String attributeName) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            RegularQueryPathCreator.andIsNotNull(baseCriteria, attributeName);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void orIsNotNull(final String attributeName) {
-        orEquals(DO_NOT_USE_LOWER_CASE, BaseCriteria.DEFAULT_OR_PREDICATE_INDEX, attributeName, null, CriteriaOrType.IS_NOT_NULL);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void andCollectionIsEmpty(final String collectionName) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            RegularQueryPathCreator.andCollectionIsEmpty(baseCriteria, collectionName);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void andCollectionIsNotEmpty(final String collectionName) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            RegularQueryPathCreator.andCollectionIsNotEmpty(baseCriteria, collectionName);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setDistinctTrue() {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            RegularQueryPathCreator.setDistinctTrue(baseCriteria);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void andStringIn(final boolean toLowerCase, final String attributeName, final List<String> valueList) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            RegularQueryPathCreator.andStringIn(toLowerCase, baseCriteria, attributeName, valueList);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void andStringNotIn(final boolean toLowerCase, final String attributeName, final List<String> valueList) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            RegularQueryPathCreator.andStringNotIn(toLowerCase, baseCriteria, attributeName, valueList);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void andStringLike(final boolean toLowerCase, final String attributeName, final String value) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            RegularQueryPathCreator.andStringLike(toLowerCase, baseCriteria, attributeName, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void andStringNotLike(final boolean toLowerCase, final String attributeName, final String value) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            RegularQueryPathCreator.andStringNotLike(toLowerCase, baseCriteria, attributeName, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <E> void andAttributeIn(final String attributeName, final List<E> attributeList) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            RegularQueryPathCreator.andAttributeIn(baseCriteria, attributeName, attributeList);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void andAttributeIn(final String attributeName, final SubQueryImp uaiSubQuery) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            RegularQueryPathCreator.andAttributeIn(baseCriteria, attributeName, uaiSubQuery);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void andAttributeNotIn(final String attributeName, final SubQueryImp uaiSubQuery) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            RegularQueryPathCreator.andAttributeNotIn(baseCriteria, attributeName, uaiSubQuery);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <E> void andAttributeNotIn(final String attributeName, final List<E> attributeList) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            RegularQueryPathCreator.andAttributeNotIn(baseCriteria, attributeName, attributeList);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void sum(final String... attributeNameArray) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            MultiSelectQueryPathCreator.sum(baseCriteria, attributeNameArray);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void addMultiSelectSelectAttribute(final String... attributeNameArray) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            MultiSelectQueryPathCreator.addMultiSelectSelectAttribute(baseCriteria, attributeNameArray);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void avg(final String... attributeNameArray) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            MultiSelectQueryPathCreator.avg(baseCriteria, attributeNameArray);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void square(final String... attributeNameArray) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            MultiSelectQueryPathCreator.square(baseCriteria, attributeNameArray);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <N extends Number> void sum(final String attributeName, final N number) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            MultiSelectQueryPathCreator.sum(baseCriteria, attributeName, number);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <N extends Number> void sum(final N number, final String attributeName) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            MultiSelectQueryPathCreator.sum(baseCriteria, number, attributeName);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void groupBy(final String[] attributeName) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            MultiSelectQueryPathCreator.groupBy(baseCriteria, attributeName);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void diff(final String firstAttribute, final String secondAttribute) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            MultiSelectQueryPathCreator.diff(baseCriteria, firstAttribute, secondAttribute);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <N extends Number> void diff(final String attributeName, final N number) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            MultiSelectQueryPathCreator.diff(baseCriteria, attributeName, number);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <N extends Number> void diff(final N number, final String attributeName) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            MultiSelectQueryPathCreator.diff(baseCriteria, number, attributeName);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void multiply(final String firstAttribute, final String secondAttribute) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            MultiSelectQueryPathCreator.multiply(baseCriteria, firstAttribute, secondAttribute);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <N extends Number> void multiply(final String attributeName, final N number) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            MultiSelectQueryPathCreator.multiply(baseCriteria, attributeName, number);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <N extends Number> void multiply(final N number, final String attributeName) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            MultiSelectQueryPathCreator.multiply(baseCriteria, number, attributeName);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void divide(final String firstAttribute, final String secondAttribute) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            MultiSelectQueryPathCreator.divide(baseCriteria, firstAttribute, secondAttribute);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <N extends Number> void divide(final String attributeName, final N number) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            MultiSelectQueryPathCreator.divide(baseCriteria, attributeName, number);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <N extends Number> void divide(final N number, final String attributeName) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            MultiSelectQueryPathCreator.divide(baseCriteria, number, attributeName);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void module(final String firstAttribute, final String secondAttribute) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            MultiSelectQueryPathCreator.module(baseCriteria, firstAttribute, secondAttribute);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void module(final String attributeName, final Integer number) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            MultiSelectQueryPathCreator.module(baseCriteria, attributeName, number);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void module(final Integer number, final String attributeName) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            MultiSelectQueryPathCreator.module(baseCriteria, number, attributeName);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void countAttribute(final String[] attributeArray) {
-        final List<BaseCriteria> baseCriteriaList = basicCriteriaElements.getBaseCriteriaList();
-
-        for (final BaseCriteria baseCriteria : baseCriteriaList) {
-            MultiSelectQueryPathCreator.countAttribute(baseCriteria, attributeArray);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

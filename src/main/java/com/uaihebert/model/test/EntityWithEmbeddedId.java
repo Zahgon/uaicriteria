@@ -27,18 +27,18 @@ public class EntityWithEmbeddedId {
     private String anyString;
 
     public RegularEmbeddedId getEmbeddedId() {
-        return embeddedId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setEmbeddedId(final RegularEmbeddedId embeddedId) {
-        this.embeddedId = embeddedId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getAnyString() {
-        return anyString;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setAnyString(final String anyString) {
-        this.anyString = anyString;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

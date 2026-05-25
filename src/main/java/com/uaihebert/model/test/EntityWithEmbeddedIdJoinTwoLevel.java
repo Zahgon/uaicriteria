@@ -24,32 +24,33 @@ public class EntityWithEmbeddedIdJoinTwoLevel {
 
     @Id
     private long id;
+
     private String stringAttribute;
 
     @OneToOne
     private EntityWithEmbeddedIdJoinOneLevel entityWithEmbeddedIdJoinOneLevel;
 
     public long getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setId(final long id) {
-        this.id = id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getStringAttribute() {
-        return stringAttribute;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setStringAttribute(final String stringAttribute) {
-        this.stringAttribute = stringAttribute;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public EntityWithEmbeddedIdJoinOneLevel getEntityWithEmbeddedIdJoinOneLevel() {
-        return entityWithEmbeddedIdJoinOneLevel;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setEntityWithEmbeddedIdJoinOneLevel(final EntityWithEmbeddedIdJoinOneLevel entityWithEmbeddedIdJoinOneLevel) {
-        this.entityWithEmbeddedIdJoinOneLevel = entityWithEmbeddedIdJoinOneLevel;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

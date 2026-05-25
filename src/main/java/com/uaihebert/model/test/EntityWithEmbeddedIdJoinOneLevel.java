@@ -28,8 +28,11 @@ public class EntityWithEmbeddedIdJoinOneLevel {
 
     @Id
     private long id;
+
     private String stringAttribute;
+
     private Boolean booleanAttributeOne;
+
     private Boolean booleanAttributeTwo;
 
     @OneToMany
@@ -45,66 +48,66 @@ public class EntityWithEmbeddedIdJoinOneLevel {
     private EntityWithEmbeddedId entityWithEmbeddedId;
 
     public long getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setId(final long id) {
-        this.id = id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getStringAttribute() {
-        return stringAttribute;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setStringAttribute(final String stringAttribute) {
-        this.stringAttribute = stringAttribute;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Boolean getBooleanAttributeOne() {
-        return booleanAttributeOne;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setBooleanAttributeOne(final Boolean booleanAttributeOne) {
-        this.booleanAttributeOne = booleanAttributeOne;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Boolean getBooleanAttributeTwo() {
-        return booleanAttributeTwo;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setBooleanAttributeTwo(final Boolean booleanAttributeTwo) {
-        this.booleanAttributeTwo = booleanAttributeTwo;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public List<RegularEntityOne> getRegularEntityOneList() {
-        return regularEntityOneList;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setRegularEntityOneList(final List<RegularEntityOne> regularEntityOneList) {
-        this.regularEntityOneList = regularEntityOneList;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Set<RegularEntityTwo> getRegularEntityTwoSet() {
-        return regularEntityTwoSet;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setRegularEntityTwoSet(final Set<RegularEntityTwo> regularEntityTwoSet) {
-        this.regularEntityTwoSet = regularEntityTwoSet;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Collection<RegularEntityThree> getRegularEntityThreeCollection() {
-        return regularEntityThreeCollection;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setRegularEntityThreeCollection(final Collection<RegularEntityThree> regularEntityThreeCollection) {
-        this.regularEntityThreeCollection = regularEntityThreeCollection;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public EntityWithEmbeddedId getEntityWithEmbeddedId() {
-        return entityWithEmbeddedId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setEntityWithEmbeddedId(final EntityWithEmbeddedId entityWithEmbeddedId) {
-        this.entityWithEmbeddedId = entityWithEmbeddedId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

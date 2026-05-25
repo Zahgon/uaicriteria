@@ -20,13 +20,10 @@ import javax.persistence.criteria.Order;
 import javax.persistence.criteria.Path;
 
 public enum CriteriaResultOrderBy {
+
     ASC, DESC;
 
     public Order createOrdination(final Path path, final CriteriaBuilder criteriaBuilder) {
-        if (this.equals(ASC)) {
-            return criteriaBuilder.asc(path);
-        }
-
-        return criteriaBuilder.desc(path);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

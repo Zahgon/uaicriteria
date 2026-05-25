@@ -18,24 +18,10 @@ package com.uaihebert.cto;
 import com.uaihebert.uaicriteria.UaiCriteriaImp;
 
 public enum JoinHolderType {
+
     INNER, LEFT, INNER_FETCH, LEFT_FETCH;
 
     public <T> void createJoin(final UaiCriteriaImp<T> uaiCriteria, final JoinHolder holder) {
-        if (INNER.equals(this)) {
-            uaiCriteria.innerJoin(holder.joinName);
-            return;
-        }
-
-        if (LEFT.equals(this)) {
-            uaiCriteria.leftJoin(holder.joinName);
-            return;
-        }
-
-        if (INNER_FETCH.equals(this)) {
-            uaiCriteria.innerJoinFetch(holder.joinName);
-            return;
-        }
-
-        uaiCriteria.leftJoinFetch(holder.joinName);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

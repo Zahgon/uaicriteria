@@ -24,8 +24,11 @@ public class RegularEntityThree {
 
     @Id
     private long id;
+
     private String stringAttribute;
+
     private Boolean booleanAttributeOne;
+
     private Boolean booleanAttributeTwo;
 
     @OneToOne(mappedBy = "regularEntityThree")
@@ -38,58 +41,58 @@ public class RegularEntityThree {
     private RegularEntityFour regularEntityFour;
 
     public long getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setId(final long id) {
-        this.id = id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getStringAttribute() {
-        return stringAttribute;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setStringAttribute(final String stringAttribute) {
-        this.stringAttribute = stringAttribute;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Boolean getBooleanAttributeOne() {
-        return booleanAttributeOne;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setBooleanAttributeOne(final Boolean booleanAttributeOne) {
-        this.booleanAttributeOne = booleanAttributeOne;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Boolean getBooleanAttributeTwo() {
-        return booleanAttributeTwo;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setBooleanAttributeTwo(final Boolean booleanAttributeTwo) {
-        this.booleanAttributeTwo = booleanAttributeTwo;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public RegularEntityOne getRegularEntityOne() {
-        return regularEntityOne;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setRegularEntityOne(final RegularEntityOne regularEntityOne) {
-        this.regularEntityOne = regularEntityOne;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public RegularEntityTwo getRegularEntityTwo() {
-        return regularEntityTwo;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setRegularEntityTwo(final RegularEntityTwo regularEntityTwo) {
-        this.regularEntityTwo = regularEntityTwo;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public RegularEntityFour getRegularEntityFour() {
-        return regularEntityFour;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setRegularEntityFour(final RegularEntityFour regularEntityFour) {
-        this.regularEntityFour = regularEntityFour;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

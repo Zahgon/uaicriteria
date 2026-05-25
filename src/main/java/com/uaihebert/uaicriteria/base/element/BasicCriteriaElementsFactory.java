@@ -16,7 +16,6 @@
 package com.uaihebert.uaicriteria.base.element;
 
 import com.uaihebert.uaicriteria.criteria.QueryType;
-
 import javax.persistence.EntityManager;
 
 public final class BasicCriteriaElementsFactory {
@@ -25,40 +24,26 @@ public final class BasicCriteriaElementsFactory {
     }
 
     public static <T> BasicCriteriaElements create(final EntityManager entityManager, final Class<T> entityClass, final QueryType queryType) {
-        if (QueryType.TUPLE.equals(queryType)) {
-            return createForMultiSelectQuery(entityManager, entityClass);
-        }
-
-        return createForRegularQuery(entityManager, entityClass);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static <T> BasicCriteriaElements createSubQuery(final String selectedAttribute, final Class<T> subQueryClass, final BasicCriteriaElements basicCriteriaElements) {
-        final BasicCriteriaElements subQueryBasicElements = createBasicElements(basicCriteriaElements.entityManager);
-
-        final BaseCriteria subQueryBaseCriteria = BaseCriteriaFactory.createSubQueryBaseCriteria(basicCriteriaElements, selectedAttribute, subQueryClass);
-        subQueryBasicElements.setSubQueryCriteria(subQueryBaseCriteria);
-
-        return subQueryBasicElements;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private static <T> BasicCriteriaElements createForRegularQuery(final EntityManager entityManager, final Class<T> entityClass) {
         final BasicCriteriaElements basicCriteriaElements = createBasicElements(entityManager);
-
         final BaseCriteria<T> countBaseCriteria = BaseCriteriaFactory.createCountBaseCriteria(entityManager, entityClass);
         basicCriteriaElements.setCountCriteria(countBaseCriteria);
-
         final BaseCriteria<T> regularBaseCriteria = BaseCriteriaFactory.createRegularBaseCriteria(entityManager, entityClass);
         basicCriteriaElements.setRegularCriteria(regularBaseCriteria);
-
         return basicCriteriaElements;
     }
 
     private static <T> BasicCriteriaElements createForMultiSelectQuery(final EntityManager entityManager, final Class<T> entityClass) {
         final BasicCriteriaElements basicCriteriaElements = createBasicElements(entityManager);
-
         final BaseCriteria<T> multiselectBaseCriteria = BaseCriteriaFactory.createMultiSelectBaseCriteria(entityManager, entityClass);
         basicCriteriaElements.setMultiSelectCriteria(multiselectBaseCriteria);
-
         return basicCriteriaElements;
     }
 

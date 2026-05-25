@@ -16,418 +16,417 @@
 package com.uaihebert.model.test;
 
 import com.uaihebert.uaicriteria.UaiCriteria;
-
 import java.util.List;
 
 public class FakeUaiCriteriaCTOImp<T> implements UaiCriteria<T> {
 
     @Override
     public List<T> getResultList() {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public T getSingleResult() {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public List getMultiSelectResult() {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public <E> UaiCriteria<E> subQuery(final String subQueryResult, final Class<E> entityClass) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> andEquals(final String attributeName, final Object value) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> andEquals(final boolean toLowerCase, final String attributeName, final String value) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> orEquals(final String attributeName, final Object... valueArray) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> orStringLike(final String attributeName, final String... stringArray) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> orStringLike(final boolean toLowerCase, final String attributeName, final String... stringArray) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> orStringNotLike(final String attributeName, final String... stringArray) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> orStringNotLike(final boolean toLowerCase, final String attributeName, final String... stringArray) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> andIsMemberOf(final Object value, final String collectionName) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> andIsNotMemberOf(final Object value, final String collectionName) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> orEquals(final boolean toLowerCase, final String attributeName, final String... valueArray) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> orEquals(final int index, final String attributeName, final Object... valueArray) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> orEquals(final boolean toLowerCase, final int index, final String attributeName, final String... valueArray) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> andNotEquals(final String attributeName, final Object value) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> andNotEquals(final boolean toLowerCase, final String attributeName, final String value) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> orNotEquals(final String attributeName, final Object... valueArray) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> orNotEquals(final boolean toLowerCase, final String attributeName, final String... valueArray) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> andGreaterThan(final String attributeName, final Object value) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> andGreaterThan(final boolean toLowerCase, final String attributeName, final String value) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> andGreaterOrEqualTo(final String attributeName, final Object value) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> andGreaterOrEqualTo(final boolean toLowerCase, final String attributeName, final String value) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> andLessThan(final String attributeName, final Object value) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> andLessThan(final boolean toLowerCase, final String attributeName, final String value) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> andLessOrEqualTo(final String attributeName, final Object value) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> andLessOrEqualTo(final boolean toLowerCase, final String attributeName, final String value) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> innerJoin(final String joinName) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> leftJoin(final String joinName) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> innerJoinFetch(final String joinName) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> leftJoinFetch(final String joinName) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> setDistinctTrue() {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> andBetween(final String attributeName, final Object valueA, final Object valueB) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> andBetween(final boolean toLowerCase, final String attributeName, final String valueA, final String valueB) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> andIsNull(final String attributeName) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> andIsNotNull(final String attributeName) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> andCollectionIsEmpty(final String collectionName) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> andCollectionIsNotEmpty(final String collectionName) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> andStringLike(final String attributeName, final String value) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> andStringLike(final boolean toLowerCase, final String attributeName, final String value) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> andStringNotLike(final String attributeName, final String value) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public <E> UaiCriteria<T> andAttributeIn(final String attributeName, final List<E> attributeList) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public <E> UaiCriteria<T> andAttributeIn(final String attributeName, final UaiCriteria<E> uaiSubQuery) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public <E> UaiCriteria<T> andAttributeNotIn(final String attributeName, final List<E> attributeList) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public <E> UaiCriteria<T> andAttributeNotIn(final String attributeName, final UaiCriteria<E> uaiSubQuery) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> andStringNotLike(final boolean toLowerCase, final String attributeName, final String value) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> andStringIn(final String attributeName, final List<String> valueList) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> andStringIn(final boolean toLowerCase, final String attributeName, final List<String> valueList) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> andStringNotIn(final String attributeName, final List<String> valueList) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> andStringNotIn(final boolean toLowerCase, final String attributeName, final List<String> valueList) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> orderByAsc(final String attributeName) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> orderByDesc(final String attributeName) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> setFirstResult(final Integer firstResult) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> setMaxResults(final Integer maxResults) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> addAndSeparatedByOr(final int index, final String attributeName, final Object value) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> addAndSeparatedByOr(final boolean toLowerCase, final int index, final String attributeName, final String value) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Long count() {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Long countRegularCriteria() {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> countAttribute(final String... attributeNameArray) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> addHint(final String key, final String value) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> sum(final String... attributeNameArray) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> diff(final String firstAttribute, final String secondAttribute) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public <N extends Number> UaiCriteria<T> sum(final String attributeName, final N number) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public <N extends Number> UaiCriteria<T> sum(final N number, final String attributeName) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public <N extends Number> UaiCriteria<T> diff(final String attributeName, final N number) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public <N extends Number> UaiCriteria<T> diff(final N number, final String attributeName) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> multiply(final String firstAttribute, final String secondAttribute) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public <N extends Number> UaiCriteria<T> multiply(final String attributeName, final N number) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public <N extends Number> UaiCriteria<T> multiply(final N number, final String attributeName) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> divide(final String firstAttribute, final String secondAttribute) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public <N extends Number> UaiCriteria<T> divide(final String attributeName, final N number) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public <N extends Number> UaiCriteria<T> divide(final N number, final String attributeName) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> module(final String firstAttribute, final String secondAttribute) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> module(final String attributeName, final Integer number) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> module(final Integer number, final String attributeName) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> average(final String... attributeNameArray) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> square(final String... attributeNameArray) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> addMultiSelectAttribute(final String... attributeName) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> groupBy(final String... attributeName) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> orIsNull(final String attributeName) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public UaiCriteria<T> orIsNotNull(final String attributeName) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

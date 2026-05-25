@@ -18,7 +18,6 @@ package com.uaihebert.cto;
 import com.uaihebert.uaicriteria.UaiCriteria;
 import com.uaihebert.uaicriteria.UaiCriteriaImp;
 import com.uaihebert.uaicriteria.criteria.QueryType;
-
 import javax.persistence.EntityManager;
 import java.util.Arrays;
 
@@ -28,27 +27,7 @@ public final class UaiCriteriaBuilder {
     }
 
     public static <T> UaiCriteria<T> createUaiCriteriaFromCTO(final UaiCriteria<T> uaiCTO, final EntityManager entityManager, final Class<T> entityClass, final QueryType queryType) {
-        final UaiCriteriaImp<T> uaiCriteria = new UaiCriteriaImp<T>(entityManager, entityClass, queryType);
-
-        final UaiCTOImp<T> uaiCTOImp = (UaiCTOImp) uaiCTO;
-
-        setPagination(uaiCTOImp, uaiCriteria);
-
-        configureJoins(uaiCTOImp, uaiCriteria);
-
-        addMultiSelectAttributes(uaiCTOImp, uaiCriteria);
-
-        addCriteriaConditions(uaiCTOImp, uaiCriteria);
-
-        configureGroupBy(uaiCTOImp, uaiCriteria);
-
-        orderCriteria(uaiCTOImp, uaiCriteria);
-
-        if (uaiCTOImp.distinct) {
-            uaiCriteria.setDistinctTrue();
-        }
-
-        return uaiCriteria;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private static <T> void addMultiSelectAttributes(final UaiCTOImp<T> uaiCTOImp, final UaiCriteriaImp<T> uaiCriteria) {
@@ -64,7 +43,6 @@ public final class UaiCriteriaBuilder {
             uaiCriteria.setFirstResult(uaiCTOImp.getFirstResult());
             uaiCTOImp.setFirstResult(null);
         }
-
         if (uaiCTOImp.getMaxResults() != null) {
             uaiCriteria.setMaxResults(uaiCTOImp.getMaxResults());
             uaiCTOImp.setMaxResults(null);
@@ -77,7 +55,6 @@ public final class UaiCriteriaBuilder {
                 uaiCriteria.orderByDesc(holder.attributeName);
                 continue;
             }
-
             uaiCriteria.orderByAsc(holder.attributeName);
         }
     }

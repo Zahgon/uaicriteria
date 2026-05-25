@@ -16,7 +16,6 @@
 package com.uaihebert.util;
 
 import com.uaihebert.model.EntityPathHelper;
-
 import javax.persistence.Embeddable;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
@@ -31,6 +30,7 @@ import java.util.Set;
 public final class ReflectionUtil {
 
     private static final int LAST_CLASS_OF_PATH = 2;
+
     private static final List<Class> ALLOWED_BAG_TYPES = new ArrayList<Class>();
 
     static {
@@ -48,20 +48,14 @@ public final class ReflectionUtil {
 
     private static String getAttributeType(final Class<?> entityClass, final String attributeName, final boolean silently) {
         validateData(entityClass, attributeName);
-
         Field currentField = null;
-
         final String[] pathArray = EntityPathHelper.extractPaths(attributeName);
-
         Class<?> currentClass = entityClass;
-
         for (int i = 0; i < pathArray.length; i++) {
             final Field foundField = getField(currentClass, pathArray[i], silently);
             final int fieldPosition = i + 1;
-
             if (fieldPosition < pathArray.length) {
                 currentClass = foundField.getType();
-
                 if (currentClass.equals(List.class) || currentClass.equals(Set.class) || currentClass.equals(Collection.class)) {
                     currentClass = extractBagType(foundField);
                 }
@@ -69,18 +63,15 @@ public final class ReflectionUtil {
                 currentField = foundField;
             }
         }
-
         if (currentField != null) {
             return currentField.getType().getCanonicalName();
         }
-
         return null;
     }
 
     private static Class extractBagType(final Field foundField) {
         final Class currentClass;
         final Type genericType = foundField.getGenericType();
-
         final ParameterizedType aType = (ParameterizedType) genericType;
         final Type[] fieldArgTypes = aType.getActualTypeArguments();
         currentClass = (Class) fieldArgTypes[0];
@@ -91,7 +82,6 @@ public final class ReflectionUtil {
         if (entityClass == null) {
             throw new IllegalArgumentException("entityClass parameter cannot be null");
         }
-
         if (attributeName == null || attributeName.isEmpty()) {
             throw new IllegalArgumentException("attributeName parameter cannot be null");
         }
@@ -99,7 +89,6 @@ public final class ReflectionUtil {
 
     private static List<Field> getAllFields(final List<Field> fields, final Class<?> type) {
         Collections.addAll(fields, type.getDeclaredFields());
-
         if (type.getSuperclass() != null) {
             fields.addAll(getAllFields(fields, type.getSuperclass()));
         }
@@ -108,63 +97,46 @@ public final class ReflectionUtil {
 
     private static Field getField(final Class<?> entityClass, final String attributeName, final boolean silently) {
         final List<Field> fields = new ArrayList<Field>();
-
         getAllFields(fields, entityClass);
-
         final String internedName = attributeName.intern();
         for (final Field field : fields) {
             if (internedName.equals(field.getName())) {
                 return field;
             }
         }
-
         if (silently) {
             return null;
         }
-
         throw new IllegalArgumentException("We could not find the parameter: " + attributeName + " in the given class: " + entityClass);
     }
 
     public static boolean isDouble(final Class<?> entityClass, final String attributeName) {
-        final String attributeType = getAttributeType(entityClass, attributeName);
-
-        return attributeType.toLowerCase().contains("double");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static <T> boolean isFloat(final Class<T> entityClass, final String attributeName) {
-        final String attributeType = getAttributeType(entityClass, attributeName);
-
-        return attributeType.toLowerCase().contains("float");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static <T> boolean isLong(final Class<T> entityClass, final String attributeName) {
-        final String attributeType = getAttributeType(entityClass, attributeName);
-
-        return attributeType.toLowerCase().contains("long");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private static <T> boolean isInteger(final Class<T> entityClass, final String attributeName) {
         final String attributeType = getAttributeType(entityClass, attributeName);
-
         return attributeType.toLowerCase().contains("integer") || "int".equalsIgnoreCase(attributeType);
     }
 
     public static <T> boolean isString(final Class<T> entityClass, final String attributeName) {
-        final String attributeType = getAttributeType(entityClass, attributeName);
-
-        return attributeType.toLowerCase().contains("string");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static <T> boolean isDate(final Class<T> entityClass, final String attributeName) {
-        final String attributeType = getAttributeType(entityClass, attributeName);
-
-        return attributeType.toLowerCase().contains("util.date");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static <T> boolean isCalendar(final Class<T> entityClass, final String attributeName) {
-        final String attributeType = getAttributeType(entityClass, attributeName);
-
-        return attributeType.toLowerCase().contains("calendar");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private static boolean isBagType(final Class<?> entityClass) {
@@ -172,113 +144,66 @@ public final class ReflectionUtil {
     }
 
     public static <T> boolean isList(final Class<T> entityClass, final String collectionName) {
-        final String attributeType = getAttributeType(entityClass, collectionName);
-
-        return attributeType.toLowerCase().contains("list");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static <T> boolean isList(final Class<T> entityClass, final String collectionName, final boolean silently) {
-        final String attributeType = getAttributeType(entityClass, collectionName, silently);
-
-        return attributeType != null && attributeType.toLowerCase().contains("list");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static <T> boolean isSet(final Class<T> entityClass, final String collectionName) {
-        final String attributeType = getAttributeType(entityClass, collectionName);
-
-        return attributeType.toLowerCase().contains("set");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static <T> boolean isSet(final Class<T> entityClass, final String collectionName, final boolean silently) {
-        final String attributeType = getAttributeType(entityClass, collectionName, silently);
-
-        return attributeType != null && attributeType.toLowerCase().contains("set");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static <T> boolean isMap(final Class<T> entityClass, final String collectionName) {
-        final String attributeType = getAttributeType(entityClass, collectionName);
-
-        return attributeType.toLowerCase().contains("map");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static <T> boolean isMap(final Class<T> entityClass, final String collectionName, final boolean silently) {
-        final String attributeType = getAttributeType(entityClass, collectionName, silently);
-
-        return attributeType != null && attributeType.toLowerCase().contains("map");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static <T> boolean isCollection(final Class<T> entityClass, final String collectionName) {
-        final String attributeType = getAttributeType(entityClass, collectionName);
-
-        return attributeType.toLowerCase().contains("collection");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static <T> boolean isCollection(final Class<T> entityClass, final String collectionName, final boolean silently) {
-        final String attributeType = getAttributeType(entityClass, collectionName, silently);
-
-        return attributeType != null && attributeType.toLowerCase().contains("collection");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static <T> boolean isBigDecimal(final Class<T> entityClass, final String attributeName) {
-        final String attributeType = getAttributeType(entityClass, attributeName);
-
-        return attributeType.toLowerCase().contains("bigdecimal");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static boolean isEmbeddedId(final String path, final Class<?> entityClass) {
-        final String[] paths = EntityPathHelper.extractPaths(path);
-        final Class<?> attributeClass = getClassOfTheLastAttribute(paths, entityClass);
-
-        final Annotation[] declaredAnnotations = attributeClass.getDeclaredAnnotations();
-
-        for (final Annotation annotation : declaredAnnotations) {
-            if (annotation instanceof Embeddable) {
-                return true;
-            }
-        }
-
-        return false;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Class getClassOfTheLastAttribute(final String[] fullPath, final Class<?> entityClass) {
-        final String currentPosition = fullPath[0];
-        final Field attributeField = getField(entityClass, currentPosition, false);
-        final Class attributeClass = extractClassFromField(attributeField);
-
-        if (fullPath.length > LAST_CLASS_OF_PATH) {
-            final String constructedPath = EntityPathHelper.constructPathFromArray(1, fullPath.length, fullPath);
-            return getClassOfTheLastAttribute(EntityPathHelper.extractPaths(constructedPath), attributeClass);
-        }
-
-        return attributeClass;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private static Class extractClassFromField(final Field attributeField) {
         if (ReflectionUtil.isBagType(attributeField.getType())) {
             final ParameterizedType collectionType = (ParameterizedType) attributeField.getGenericType();
-
             return (Class) collectionType.getActualTypeArguments()[0];
         }
-
         return attributeField.getType();
     }
 
     public static boolean isSupportedCollection(final Class entityClass, final String collectionName, final boolean silently) {
-        return isCollection(entityClass, collectionName, silently) ||
-                isSet(entityClass, collectionName, silently) ||
-                isList(entityClass, collectionName, silently) ||
-                isMap(entityClass, collectionName, silently);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static boolean isNumber(final Class entityClass, final String attributeName) {
-        return isDecimalType(entityClass, attributeName) ||
-                isLong(entityClass, attributeName) ||
-                isInteger(entityClass, attributeName);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private static boolean isDecimalType(final Class entityClass, final String attributeName) {
-        return isBigDecimal(entityClass, attributeName) ||
-                isDouble(entityClass, attributeName) ||
-                isFloat(entityClass, attributeName);
+        return isBigDecimal(entityClass, attributeName) || isDouble(entityClass, attributeName) || isFloat(entityClass, attributeName);
     }
 }

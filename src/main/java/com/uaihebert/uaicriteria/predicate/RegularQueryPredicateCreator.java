@@ -16,7 +16,6 @@
 package com.uaihebert.uaicriteria.predicate;
 
 import com.uaihebert.uaicriteria.subquery.SubQueryImp;
-
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.Expression;
 import javax.persistence.criteria.Path;
@@ -31,111 +30,50 @@ public final class RegularQueryPredicateCreator extends AbstractPredicateCreator
     }
 
     public static Predicate createEqualPredicate(final boolean toLowerCase, final CriteriaBuilder criteriaBuilder, final Path path, final Object value) {
-        if (toLowerCase) {
-            final String valueAsString = (String) value;
-            final Expression<String> lower = criteriaBuilder.lower(path);
-
-            return criteriaBuilder.equal(lower, valueAsString.toLowerCase());
-        }
-
-        return criteriaBuilder.equal(path, value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static <Y extends Comparable<? super Y>> Predicate createGreaterThanPredicate(final boolean toLowerCase, final CriteriaBuilder criteriaBuilder, final Expression<? extends Y> path, final Y value) {
-        if (toLowerCase) {
-            final String loweredValue = createLoweredValue(value);
-
-            final Expression<String> loweredExpression = createLoweredExpression(criteriaBuilder, path);
-
-            return criteriaBuilder.greaterThan(loweredExpression, loweredValue);
-        }
-
-        return criteriaBuilder.greaterThan(path, value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static <Y extends Comparable<? super Y>> Predicate createGreaterOrEqualToPredicate(final boolean toLowerCase, final CriteriaBuilder criteriaBuilder, final Expression<? extends Y> path, final Y value) {
-        if (toLowerCase) {
-            final String loweredValue = createLoweredValue(value);
-
-            final Expression<String> loweredExpression = createLoweredExpression(criteriaBuilder, path);
-
-            return criteriaBuilder.greaterThanOrEqualTo(loweredExpression, loweredValue);
-        }
-
-        return criteriaBuilder.greaterThanOrEqualTo(path, value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static <Y extends Comparable<? super Y>> Predicate createLessThanPredicate(final boolean toLowerCase, final CriteriaBuilder criteriaBuilder, final Expression<? extends Y> path, final Y value) {
-        if (toLowerCase) {
-            final String loweredValue = createLoweredValue(value);
-
-            final Expression<String> loweredExpression = createLoweredExpression(criteriaBuilder, path);
-
-            return criteriaBuilder.lessThan(loweredExpression, loweredValue);
-        }
-
-        return criteriaBuilder.lessThan(path, value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static <Y extends Comparable<? super Y>> Predicate createLessOrEqualToPredicate(final boolean toLowerCase, final CriteriaBuilder criteriaBuilder, final Expression<? extends Y> path, final Y value) {
-        if (toLowerCase) {
-            final String loweredValue = createLoweredValue(value);
-
-            final Expression<String> loweredExpression = createLoweredExpression(criteriaBuilder, path);
-
-            return criteriaBuilder.lessThanOrEqualTo(loweredExpression, loweredValue);
-        }
-
-        return criteriaBuilder.lessThanOrEqualTo(path, value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Predicate createIsNullPredicate(final CriteriaBuilder criteriaBuilder, final Path path) {
-        return criteriaBuilder.isNull(path);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Predicate createIsEmptyPredicate(final CriteriaBuilder criteriaBuilder, final Path path) {
-        return criteriaBuilder.isEmpty(path);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Predicate createLikePredicate(final boolean toLowerCase, final CriteriaBuilder criteriaBuilder, final Path path, final String value) {
-        if (toLowerCase) {
-            final String loweredValue = createLoweredValue(value);
-
-            final Expression<String> loweredExpression = createLoweredExpression(criteriaBuilder, path);
-
-            return criteriaBuilder.like(loweredExpression, loweredValue);
-        }
-
-        return criteriaBuilder.like(path, value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Predicate createStringInPredicate(final boolean toLowerCase, final CriteriaBuilder criteriaBuilder, final Path path, final List<String> valueList) {
-        if (toLowerCase) {
-            final List<String> loweredList = new ArrayList<String>();
-
-            for (final String value : valueList) {
-                loweredList.add(value.toLowerCase());
-            }
-
-            final Expression<String> loweredExpression = createLoweredExpression(criteriaBuilder, path);
-
-            return loweredExpression.in(loweredList);
-        }
-
-        return path.in(valueList);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Predicate createAndIsMemberOf(final CriteriaBuilder criteriaBuilder, final Path path, final Object value) {
-        return criteriaBuilder.isMember(value, path);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static <E> Predicate createAttributeInPredicate(final Path path, final List<E> attributeList) {
-        return path.in(attributeList);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Predicate createAttributeInPredicate(final CriteriaBuilder criteriaBuilder, final Path path, final SubQueryImp uaiSubQuery) {
-        uaiSubQuery.prepareSubQuery();
-
-        return criteriaBuilder.in(path).value(uaiSubQuery.getSubQuery());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

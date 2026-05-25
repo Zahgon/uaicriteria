@@ -29,8 +29,11 @@ public class RegularEntityFive {
 
     @Id
     private long id;
+
     private String stringAttribute;
+
     private Boolean booleanAttributeOne;
+
     private Boolean booleanAttributeTwo;
 
     @ElementCollection
@@ -49,91 +52,84 @@ public class RegularEntityFive {
     private Collection<RegularEntityThree> regularEntityThreeCollection;
 
     public long getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setId(final long id) {
-        this.id = id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getStringAttribute() {
-        return stringAttribute;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setStringAttribute(final String stringAttribute) {
-        this.stringAttribute = stringAttribute;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Boolean getBooleanAttributeOne() {
-        return booleanAttributeOne;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setBooleanAttributeOne(final Boolean booleanAttributeOne) {
-        this.booleanAttributeOne = booleanAttributeOne;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Boolean getBooleanAttributeTwo() {
-        return booleanAttributeTwo;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setBooleanAttributeTwo(final Boolean booleanAttributeTwo) {
-        this.booleanAttributeTwo = booleanAttributeTwo;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public List<RegularEntityOne> getRegularEntityOneList() {
-        return regularEntityOneList;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setRegularEntityOneList(final List<RegularEntityOne> regularEntityOneList) {
-        this.regularEntityOneList = regularEntityOneList;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Set<RegularEntityTwo> getRegularEntityTwoSet() {
-        return regularEntityTwoSet;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setRegularEntityTwoSet(final Set<RegularEntityTwo> regularEntityTwoSet) {
-        this.regularEntityTwoSet = regularEntityTwoSet;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Collection<RegularEntityThree> getRegularEntityThreeCollection() {
-        return regularEntityThreeCollection;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setRegularEntityThreeCollection(final Collection<RegularEntityThree> regularEntityThreeCollection) {
-        this.regularEntityThreeCollection = regularEntityThreeCollection;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public List<String> getStringList() {
-        return stringList;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setStringList(final List<String> stringList) {
-        this.stringList = stringList;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Map<String, String> getStringMap() {
-        return stringMap;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setStringMap(final Map<String, String> stringMap) {
-        this.stringMap = stringMap;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public boolean equals(final Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        final RegularEntityFive that = (RegularEntityFive) o;
-
-        if (id != that.id) return false;
-
-        return true;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public int hashCode() {
-        return (int) (id ^ (id >>> 32));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

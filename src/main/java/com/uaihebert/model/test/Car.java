@@ -34,10 +34,10 @@ public class Car {
     private Color color;
 
     private String name;
+
     private BigDecimal weight;
 
     public Car() {
-
     }
 
     public Car(final int id, final String name, final Color color, final BigDecimal weight) {
@@ -48,57 +48,52 @@ public class Car {
     }
 
     public String getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setName(final String name) {
-        this.name = name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Color getColor() {
-        return color;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setColor(final Color color) {
-        this.color = color;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public int hashCode() {
-        return id * 35;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public boolean equals(final Object obj) {
-        if (obj instanceof Car) {
-            final Car car = (Car) obj;
-            return car.id == id;
-        }
-
-        return false;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public int getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setId(final int id) {
-        this.id = id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Person getPerson() {
-        return person;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setPerson(final Person person) {
-        this.person = person;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public BigDecimal getWeight() {
-        return weight;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setWeight(final BigDecimal weight) {
-        this.weight = weight;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

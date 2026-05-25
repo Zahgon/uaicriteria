@@ -22,9 +22,11 @@ import javax.persistence.criteria.Path;
 import javax.persistence.criteria.Root;
 
 public class JoinWrapper<T> {
+
     private Root<T> root;
 
     private Join join;
+
     private Fetch joinFetch;
 
     private JoinWrapper(final Join join) {
@@ -40,31 +42,14 @@ public class JoinWrapper<T> {
     }
 
     public void createJoinInRoot(final String joinName, final JoinType joinType, final boolean isFetch) {
-        if (isFetch) {
-            this.joinFetch = root.fetch(joinName, joinType);
-            return;
-        }
-
-        this.join = root.join(joinName, joinType);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public JoinWrapper createJoinFromJoin(final String joinName, final JoinType joinType) {
-        if (join != null) {
-            final Join innerJoin = join.join(joinName, joinType);
-            return new JoinWrapper(innerJoin);
-        }
-
-        final Fetch innerJoin = joinFetch.fetch(joinName, joinType);
-        return new JoinWrapper(innerJoin);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Path getPath(final String requiredPath) {
-        if (join != null) {
-            return join.get(requiredPath);
-        }
-
-        final Path fetchAsPath = (Path) joinFetch;
-
-        return fetchAsPath.get(requiredPath);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

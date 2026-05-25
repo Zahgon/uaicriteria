@@ -26,7 +26,9 @@ public class Manufacturer {
 
     @Id
     private int id;
+
     private String name;
+
     @OneToMany
     private Set<Product> products;
 
@@ -39,30 +41,26 @@ public class Manufacturer {
     }
 
     public int getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setId(final int id) {
-        this.id = id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setName(final String name) {
-        this.name = name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Set<Product> getProducts() {
-        if (products == null) {
-            products = new HashSet<Product>();
-        }
-
-        return products;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setProducts(final Set<Product> products) {
-        this.products = products;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -17,7 +17,6 @@ package com.uaihebert.uaicriteria.base.element;
 
 import com.uaihebert.uaicriteria.path.PathHelper;
 import com.uaihebert.util.ReflectionUtil;
-
 import javax.persistence.EntityManager;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
@@ -26,55 +25,28 @@ import javax.persistence.criteria.Root;
 import javax.persistence.criteria.Subquery;
 
 public final class BaseCriteriaFactory {
+
     private BaseCriteriaFactory() {
     }
 
     public static <T> BaseCriteria<T> createRegularBaseCriteria(final EntityManager entityManager, final Class<T> entityClass) {
-        final CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
-        final CriteriaQuery<T> criteriaQuery = criteriaBuilder.createQuery(entityClass);
-        final Root<T> root = criteriaQuery.from(entityClass);
-        criteriaQuery.select(root);
-
-        return new BaseCriteria(root, criteriaQuery, criteriaBuilder, entityClass);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static <T> BaseCriteria<T> createCountBaseCriteria(final EntityManager entityManager, final Class<T> entityClass) {
-        final CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
-        final CriteriaQuery<Long> criteriaQuery = criteriaBuilder.createQuery(Long.class);
-        final Root<T> root = criteriaQuery.from(entityClass);
-
-        return new BaseCriteria(root, criteriaQuery, criteriaBuilder, entityClass);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static <T> BaseCriteria<T> createMultiSelectBaseCriteria(final EntityManager entityManager, final Class<T> entityClass) {
-        final CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
-        final CriteriaQuery<Object> criteriaQuery = criteriaBuilder.createQuery(Object.class);
-        final Root<T> root = criteriaQuery.from(entityClass);
-
-        return new BaseCriteria(root, criteriaQuery, criteriaBuilder, entityClass);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static <T> BaseCriteria createSubQueryBaseCriteria(final BasicCriteriaElements basicCriteriaElements, final String selectedAttribute, final Class<T> subQueryClass) {
-        final BaseCriteria baseForSubQuery = basicCriteriaElements.getBaseCriteriaForSubQuery();
-
-        final Class selectedAttributeClass = extractClassFromAttribute(selectedAttribute, subQueryClass);
-
-        final Subquery subquery = baseForSubQuery.getCriteriaQuery().subquery(selectedAttributeClass);
-
-        final Root subQueryRoot = subquery.from(subQueryClass);
-
-        final BaseCriteria subCriteria = new BaseCriteria(subQueryRoot, subquery, baseForSubQuery.getCriteriaBuilder(), subQueryClass);
-
-        final Path subSelectSelectedAttribute = PathHelper.extractPath(subCriteria, selectedAttribute);
-
-        subquery.select(subSelectSelectedAttribute);
-
-        return subCriteria;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private static <T> Class extractClassFromAttribute(final String selectedAttribute, final Class<T> subQueryClass) {
-        final String[] attributeArray = {selectedAttribute};
-
+        final String[] attributeArray = { selectedAttribute };
         return ReflectionUtil.getClassOfTheLastAttribute(attributeArray, subQueryClass);
     }
 }

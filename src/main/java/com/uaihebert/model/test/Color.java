@@ -24,12 +24,13 @@ public class Color {
 
     @Id
     private int id;
+
     @ManyToOne
     private Manufacturer manufacturer;
+
     private String name;
 
     public Color() {
-
     }
 
     public Color(final int id, final String name) {
@@ -38,26 +39,26 @@ public class Color {
     }
 
     public int getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setId(final int id) {
-        this.id = id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setName(final String name) {
-        this.name = name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Manufacturer getManufacturer() {
-        return manufacturer;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setManufacturer(final Manufacturer manufacturer) {
-        this.manufacturer = manufacturer;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

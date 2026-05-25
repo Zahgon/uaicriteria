@@ -26,21 +26,22 @@ public class InheritanceRootEntity {
 
     @Id
     private int id;
+
     private String rootString;
 
     public int getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setId(final int id) {
-        this.id = id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getRootString() {
-        return rootString;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setRootString(final String rootString) {
-        this.rootString = rootString;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

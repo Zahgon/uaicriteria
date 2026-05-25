@@ -19,13 +19,14 @@ import javax.persistence.Entity;
 
 @Entity
 public class InheritanceFamilyOneChildEntity extends InheritanceFamilyOneEntity {
+
     private String familyOneChildEntityString;
 
     public String getFamilyOneChildEntityString() {
-        return familyOneChildEntityString;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setFamilyOneChildEntityString(final String familyOneChildEntityString) {
-        this.familyOneChildEntityString = familyOneChildEntityString;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

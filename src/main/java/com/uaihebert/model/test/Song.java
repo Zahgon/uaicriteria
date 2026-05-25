@@ -35,8 +35,11 @@ public class Song {
     private String artist;
 
     private int length;
+
     private Long totalDownloads;
+
     private float weight;
+
     private double price;
 
     @Temporal(TemporalType.DATE)
@@ -49,7 +52,6 @@ public class Song {
     private SongType type;
 
     public Song() {
-
     }
 
     public Song(final int id, final Calendar creationDate, final String name, final String artist, final int length, final Long totalDownloads, final float weight, final double price, final Date releaseDate, final SongType type) {
@@ -66,97 +68,92 @@ public class Song {
     }
 
     public Calendar getCreationDate() {
-        return creationDate;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setCreationDate(final Calendar creationDate) {
-        this.creationDate = creationDate;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public int getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setId(final int id) {
-        this.id = id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setName(final String name) {
-        this.name = name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getArtist() {
-        return artist;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setArtist(final String group) {
-        this.artist = group;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public int getLength() {
-        return length;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setLength(final int length) {
-        this.length = length;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Long getTotalDownloads() {
-        return totalDownloads;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setTotalDownloads(final Long totalDownloads) {
-        this.totalDownloads = totalDownloads;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public float getWeight() {
-        return weight;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setWeight(final float weight) {
-        this.weight = weight;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public double getPrice() {
-        return price;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setPrice(final double price) {
-        this.price = price;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Date getReleaseDate() {
-        return releaseDate;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setReleaseDate(final Date releaseDate) {
-        this.releaseDate = releaseDate;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public boolean equals(final Object obj) {
-        if (obj instanceof Song) {
-            final Song song = (Song) obj;
-            return song.id == id;
-        }
-
-        return false;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public int hashCode() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public SongType getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setType(final SongType type) {
-        this.type = type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

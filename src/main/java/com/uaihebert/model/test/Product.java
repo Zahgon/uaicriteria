@@ -26,6 +26,7 @@ public class Product {
 
     @Id
     private int id;
+
     private String name;
 
     @ManyToMany
@@ -40,30 +41,26 @@ public class Product {
     }
 
     public int getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setId(final int id) {
-        this.id = id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setName(final String name) {
-        this.name = name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public List<NickName> getNickNames() {
-        if (nickNames == null) {
-            nickNames = new ArrayList<NickName>();
-        }
-
-        return nickNames;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setNickNames(final List<NickName> nickNames) {
-        this.nickNames = nickNames;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

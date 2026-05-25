@@ -37,50 +37,67 @@ public class Person {
 
     @Id
     private int id;
+
     private String name;
+
     private String nickName;
+
     private Integer clothesInCloset;
+
     private Integer shoesInCloset;
+
     private Long totalBooksOwned;
+
     private Long socialSecurityNumber;
+
     private boolean brazilian;
+
     private boolean japanese;
+
     private float weight;
+
     private float weightB;
+
     private double height;
+
     private double heightB;
+
     private BigDecimal justBigDecimalA;
+
     private BigDecimal justBigDecimalB;
+
     @Temporal(TemporalType.DATE)
     private Date firstJobDate;
+
     @Temporal(TemporalType.DATE)
     private Date firstSoccerMatchDate;
+
     @Temporal(TemporalType.DATE)
     private Calendar birthDayDate;
+
     @Temporal(TemporalType.DATE)
     private Calendar firstKissDate;
+
     @OneToOne(cascade = CascadeType.ALL)
     private Address address;
+
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn
     private Car car;
+
     @OneToMany(mappedBy = "person", cascade = CascadeType.ALL)
     private List<Dog> dogs;
+
     @OneToMany(mappedBy = "person", cascade = CascadeType.ALL)
     private Set<Certification> certifications;
+
     @OneToMany(mappedBy = "person", cascade = CascadeType.ALL)
     private Collection<Cat> cats;
 
     public Person() {
-
     }
 
-    public Person(final int id, final String name, final String nickName,
-                  final Integer clothesInCloset, final Calendar birthDayDate,
-                  final Calendar firstKissDate, final float weight, final double height,
-                  final Long socialSecurityNumber, final Integer shoesInCloset,
-                  final Long totalBooksOwned, final Date firstJobDate, final Date firstSoccerMatchDate, final boolean brazilian,
-                  final boolean japanese, final double heightB, final float weightB, final BigDecimal justBigDecimalA, final BigDecimal justBigDecimalB) {
+    public Person(final int id, final String name, final String nickName, final Integer clothesInCloset, final Calendar birthDayDate, final Calendar firstKissDate, final float weight, final double height, final Long socialSecurityNumber, final Integer shoesInCloset, final Long totalBooksOwned, final Date firstJobDate, final Date firstSoccerMatchDate, final boolean brazilian, final boolean japanese, final double heightB, final float weightB, final BigDecimal justBigDecimalA, final BigDecimal justBigDecimalB) {
         this.id = id;
         this.name = name;
         this.nickName = nickName;
@@ -103,205 +120,188 @@ public class Person {
     }
 
     public int getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setId(final int id) {
-        this.id = id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setName(final String name) {
-        this.name = name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getNickName() {
-        return nickName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setNickName(final String nickName) {
-        this.nickName = nickName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Integer getClothesInCloset() {
-        return clothesInCloset;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setClothesInCloset(final Integer clothesInCloset) {
-        this.clothesInCloset = clothesInCloset;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Calendar getBirthDayDate() {
-        return birthDayDate;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setBirthDayDate(final Calendar birthDayDate) {
-        this.birthDayDate = birthDayDate;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Calendar getFirstKissDate() {
-        return firstKissDate;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setFirstKissDate(final Calendar firstKissDate) {
-        this.firstKissDate = firstKissDate;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public float getWeight() {
-        return weight;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setWeight(final float weight) {
-        this.weight = weight;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public double getHeight() {
-        return height;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setHeight(final double height) {
-        this.height = height;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public int hashCode() {
-        return id * 33;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public boolean equals(final Object obj) {
-        if (obj instanceof Person) {
-            final Person person = (Person) obj;
-            return person.id == id;
-        }
-
-        return false;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Long getSocialSecurityNumber() {
-        return socialSecurityNumber;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setSocialSecurityNumber(final Long socialSecurityNumber) {
-        this.socialSecurityNumber = socialSecurityNumber;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Integer getShoesInCloset() {
-        return shoesInCloset;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setShoesInCloset(final Integer shoesInCloset) {
-        this.shoesInCloset = shoesInCloset;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Long getTotalBooksOwned() {
-        return totalBooksOwned;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setTotalBooksOwned(final Long totalBooksOwned) {
-        this.totalBooksOwned = totalBooksOwned;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Date getFirstJobDate() {
-        return firstJobDate;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setFirstJobDate(final Date firstJobDate) {
-        this.firstJobDate = firstJobDate;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Date getFirstSoccerMatchDate() {
-        return firstSoccerMatchDate;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setFirstSoccerMatchDate(final Date firstSoccerMatchDate) {
-        this.firstSoccerMatchDate = firstSoccerMatchDate;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isBrazilian() {
-        return brazilian;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setBrazilian(final boolean brazilian) {
-        this.brazilian = brazilian;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isJapanese() {
-        return japanese;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setJapanese(final boolean japanese) {
-        this.japanese = japanese;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Address getAddress() {
-        return address;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setAddress(final Address address) {
-        this.address = address;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Car getCar() {
-        return car;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setCar(final Car car) {
-        this.car = car;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public List<Dog> getDogs() {
-        if (dogs == null) {
-            dogs = new ArrayList<Dog>();
-        }
-
-        return dogs;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setDogs(final List<Dog> dogs) {
-        this.dogs = dogs;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Set<Certification> getCertifications() {
-        if (certifications == null) {
-            certifications = new HashSet<Certification>();
-        }
-
-        return certifications;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setCertifications(final Set<Certification> certifications) {
-        this.certifications = certifications;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Collection<Cat> getCats() {
-        if (cats == null) {
-            cats = new ArrayList<Cat>();
-        }
-
-        return cats;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setCats(final Collection<Cat> cats) {
-        this.cats = cats;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public double getHeightB() {
-        return heightB;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setHeightB(final double heightB) {
-        this.heightB = heightB;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public float getWeightB() {
-        return weightB;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setWeightB(final float weightB) {
-        this.weightB = weightB;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }
